@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">sampleTestProject</string>
+    <string name="button_second">Image Fragment</string>
+    <string name="button_third">Text Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

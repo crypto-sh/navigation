@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.sampletestproject.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+
+        <action
+            android:id="@+id/action_firstFragment_to_navigation2"
+            app:destination="@id/navigation2" />
+
+        <action
+            android:id="@+id/action_firstFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.example.sampletestproject.thirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <argument
+            android:name="value"
+            android:defaultValue="check"
+            app:argType="string" />
+
+    </fragment>
+
+    <navigation
+        android:id="@+id/navigation2"
+        app:startDestination="@id/secondFragment">
+
+        <argument
+            android:name="amount"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <fragment
+            android:id="@+id/secondFragment"
+            android:name="com.example.sampletestproject.SecondFragment"
+            android:label="fragment_second"
+            tools:layout="@layout/fragment_second">
+
+            <argument
+                android:name="amount"
+                android:defaultValue="0"
+                app:argType="integer" />
+
+            <action
+                android:id="@+id/action_secondFragment_to_forthFragment"
+                app:destination="@id/forthFragment" />
+
+        </fragment>
+        <fragment
+            android:id="@+id/forthFragment"
+            android:name="com.example.sampletestproject.forthFragment"
+            android:label="fragment_forth"
+            tools:layout="@layout/fragment_forth" />
+    </navigation>
+
+</navigation>
